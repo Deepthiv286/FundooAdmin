@@ -1,0 +1,169 @@
+/****************************************************************************
+ * 
+ * Purpose : To apply scss to login page.
+ * 
+ * @description
+ * @file : login.scss
+ * @author : Deepthi V <deepthiv286@gmail.com>
+ * @version : 1.0
+ * @since : 10/04/2019
+ * 
+ ****************************************************************************/
+ @import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+  }
+  #F{
+    color: $blue
+  }
+  #u{
+    color: $red
+  }
+  #n{
+    color: $goldenYellow
+  }
+  #d{
+    color: $blue
+  }
+  #o{
+    color: $green
+  }
+  #oo{
+    color: $red
+  }
+  .LoginForm {
+    width: 400px;
+    height: 480px;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #555;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 3.5%;
+    justify-content: center;
+  }
+  #header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 2em;
+  }
+  #belowHeader{
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  #S{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.9em;
+  }
+  #w{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.875em;
+  }
+  #emailInput {
+    display: flex;
+    margin-bottom: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+  #email{
+    width: 245px;
+  }
+  #password{
+    width: 245px;
+  }
+  #passwordInput {
+    display: flex;
+    margin-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+  }
+  #link1{
+    margin-right: 15%;
+    margin-left: 2%;
+    display: inline;
+  }
+  #btn{
+    margin-left: 17%;
+    display: inline;
+  }
+  #link2{
+    margin-top: 7.5%;
+    margin-left: 2%;
+    text-align: start
+  }
+//   @media only screen and (min-width:360px){   
+//     #btn{
+//         margin-left: 28%;
+//      }
+//   }
+//   @media only screen and (min-width:411px){
+//        #link1{
+//         margin-right: 0%;
+//         margin-left: 5%;
+//       }
+//       #btn{
+//         margin-left: 12%;
+//      }
+//       #link2{
+//         margin-top: 7.5%;
+//         margin-left: 5%;
+//       }
+//   }
+//   @media only screen and (min-width:320px){
+//     .LoginForm{
+//         width: 100% ;
+//         height: 823px;
+//         margin: 0%;
+//         border-radius: 0%;
+//         line-height: 3em;
+//        }
+//        #link1{
+//         margin-right: 2%;
+//         display: inline;
+//       }
+//   }
+//   @media only screen and (min-width:375px){
+//     #btn{
+//         margin-left: 30%;
+//      }
+//   }
+//   @media only screen and (min-width:768px){
+//     .LoginForm{
+//         width: 380px;
+//         height: 600px;
+//         flex-direction: column;
+//         padding: 20px;
+//         border-radius: 10px;
+//         box-shadow: 0px 0px 5px #555;
+//         background-color: #fff;
+//         margin-left: auto;
+//         margin-right: auto;
+//         margin-top: 25%;
+//         justify-content: center;
+//        }
+//        #link1{
+//         margin-right: 15%;
+//         margin-left: 1%;
+//         display: inline;
+//       }
+//       #btn{
+//         margin-left: 18%;
+//         display: inline;
+//       }
+//       #link2{
+//         margin-top: 7.5%;
+//         margin-left: 1%;
+//         text-align: start
+//       }
+//   }

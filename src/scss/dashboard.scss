@@ -1,0 +1,64 @@
+/****************************************************************************
+ * 
+ * Purpose : To apply scss to dashboard.
+ * 
+ * @description
+ * @file : dashboard.scss
+ * @author : Deepthi V <deepthiv286@gmail.com>
+ * @version : 1.0
+ * @since : 11/04/2019
+ * 
+ ****************************************************************************/
+ @import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+  }
+  .advance{
+    //   position: relative;
+    margin-top: 20px;
+  }
+  .basic{
+    // position: relative;
+    margin-top: 20px;
+  }
+  .search {
+    position: center;
+    border-radius: 10px;
+    background-color: rgb(231, 221, 175);
+    margin-left: 180px;
+    margin-right: 0px;
+    width: 500px;
+    padding: 8px 90px
+  }
+  
+  .searchIcon {
+    width: 72px;
+    margin-top: 5px;
+    margin-left: -90px;
+    position: absolute;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+  }
+  
+  .searchField {
+    margin-left: 0px;
+  }
+  #searchBar {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    max-height: 50px;
+    line-height: 2;
+    margin-top: 11px;
+    background: rgba(0, 0, 0, 0.04)
+  }
+  
+  #searchInputBase {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    width: 500px;
+  }
