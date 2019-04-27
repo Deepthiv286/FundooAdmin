@@ -46,6 +46,9 @@ export default class DashBoard extends Component {
                 console.log(err.message);
             })
     }
+    /**
+     * to go to question and answer approval page
+     */
     handleQues = () => {
         try {
             this.props.history.push('/QuesApproval');
@@ -53,13 +56,33 @@ export default class DashBoard extends Component {
             console.log(error.message);
         }
     }
+    /**
+     * to go to order approval page
+     */
+    handleOrder = () => {
+        try {
+            this.props.history.push('/OrderApproval');
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+    /**
+     * to logout
+     */
+    handleLogout = () => {
+        try {
+            this.props.history.push('/login');
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
     render() {
         return (
-            <div>
+            <div >
                 <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#003366', padding: '10px 20px 10px 20px' }}>
-                    <div style={{ fontSize: '2em', paddingTop: '15px',color:'#fff' }}>FundooAdmin</div>
+                    <div style={{ fontSize: '2em', paddingTop: '15px', color: '#fff' }}>FundooAdmin</div>
                     <div>
-                        <div style={{ fontSize: '1.2em', marginLeft: '335px',color:'#fff' }}>Admin Users List</div>
+                        <div style={{ fontSize: '1.2em', marginLeft: '335px', color: '#fff' }}>Admin Users List</div>
                         <div className="search">
 
                             <div className="searchIcon">
@@ -78,7 +101,15 @@ export default class DashBoard extends Component {
                             </div>
                         </div>
                     </div>
-                    <div style={{ marginLeft: '300px',paddingTop:'20px' }}><Button variant="contained" onClick={this.handleQues}>Ques</Button></div>
+                    <div id='orderBtn'>
+                        <Button variant="contained" onClick={this.handleOrder}>Order</Button>
+                    </div>
+                    <div id='quesBtn'>
+                        <Button variant="contained" onClick={this.handleQues}>Ques</Button>
+                    </div>
+                    <div id='logBtn'>
+                        <Button variant="contained" onClick={this.handleLogout}>Logout</Button>
+                    </div>
                 </div>
                 <div className="row text-center justify-content-center mcard">
                     <div className="col-sm-4 col-lg-3">

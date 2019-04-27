@@ -85,3 +85,53 @@ export function approveAnswer(id) {
         return res;
     })
 }
+/**
+ * to reject the answer
+ */
+export function rejectAnswer(id) {
+    return axios({
+        method: 'POST',
+        url: `${constants.baseUrl}${constants.rejectAnswer}${id}`,
+        headers: jsonDataHeader,
+    }).then(res => {
+        return res;
+    })
+}
+/**
+ * to get cart list
+ */
+export function getCartList() {
+    return axios({
+        method: 'GET',
+        url: `${constants.baseUrl}${constants.cartList}`,
+        headers: jsonDataHeader
+    }).then(res => {
+        return res;
+    })
+}
+/**
+ * to approve orders
+ */
+export function approveOrder(id) {
+    return axios({
+        method: 'POST',
+        url: `${constants.baseUrl}${constants.approveOrder}`,
+        headers: jsonDataHeader,
+        data: id
+    }).then(res => {
+        return res;
+    })
+}
+/**
+ * to approve orders
+ */
+export function rejectOrder(id) {
+    return axios({
+        method: 'POST',
+        url: `${constants.baseUrl}${constants.rejectOrder}`,
+        headers: jsonDataHeader,
+        data: id
+    }).then(res => {
+        return res;
+    })
+}

@@ -25,7 +25,7 @@
   .search {
     position: center;
     border-radius: 10px;
-    background-color: rgb(231, 221, 175);
+    background-color: $yellow;
     margin-left: 180px;
     margin-right: 0px;
     width: 500px;
@@ -41,14 +41,14 @@
     -webkit-align-items: center;
     align-items: center;
     justify-content: center;
-    color: gray;
+    color: $gray;
   }
   
   .searchField {
     margin-left: 0px;
   }
   #searchBar {
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid $black;
     border-radius: 4px;
     max-height: 50px;
     line-height: 2;
@@ -61,4 +61,16 @@
     font-style: normal;
     font-size: 16px;
     width: 500px;
+  }
+  #quesBtn{
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+  #orderBtn{
+    margin-left: 90px;
+    padding-top: 20px;
+  }
+  #logBtn{
+    margin-left: 20px;
+    padding-top: 20px;
   }

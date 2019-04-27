@@ -15,4 +15,8 @@ module.exports = {
     adminList: 'user/getAdminUserList/',
     unapprovedQA: 'questionAndAnswerNotes/getUnApprovedAnswer/',
     approveAnswer: 'questionAndAnswerNotes/approve/',
+    rejectAnswer: 'questionAndAnswerNotes/reject/',
+    cartList: 'productcarts/userCartList/',
+    approveOrder: 'productcarts/adminCompleteOrder/',
+    rejectOrder: 'productcarts/adminCancelOrder/',
 }

@@ -10,10 +10,11 @@
  * 
  ****************************************************************************/
 import React, { Component } from 'react';
-import Login from "./components/Login";
+import Login from "./screens/Login";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import DashBoard from './components/DashBoard';
-import QuestionApproval from './components/QuestionApproval';
+import DashBoard from './screens/DashBoard';
+import QuestionApproval from './screens/QuestionApproval';
+import OrderApproval from './screens/OrderApproval';
 
 /**
  * importing required files
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/dashboard" component={DashBoard} />
             <Route path="/QuesApproval" component={QuestionApproval} />
+            <Route path='/OrderApproval' component={OrderApproval} />
           </div>
         </Router>
       </div>

@@ -12,7 +12,7 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
 import '../scss/qa.scss';
-import { unapprovedQA, approveAnswer } from '../services/service';
+import { unapprovedQA, approveAnswer, rejectAnswer } from '../services/service';
 /**
  * import required files
  */
@@ -54,11 +54,45 @@ export default class QuestionApproval extends Component {
     handleApprove = (id) => {
         try {
             console.log(id);
-
             const parentId = id;
             approveAnswer(parentId)
                 .then(res => {
                     console.log(res);
+                    let newQues = this.state.ques;
+                    for (let i = 0; i < newQues.length; i++) {
+                        if (newQues[i].id === id)
+                            newQues.splice(i, 1);
+                        this.setState({
+                            ques: newQues
+                        })
+                    }
+                    console.log(this.state.ques);
+                }).catch(err => {
+                    console.log(err.message);
+                })
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+    /**
+     * to reject answer
+     */
+    handleReject = (id) => {
+        try {
+            console.log(id);
+            const parentId = id;
+            rejectAnswer(parentId)
+                .then(res => {
+                    console.log(res);
+                    let newQues = this.state.ques;
+                    for (let i = 0; i < newQues.length; i++) {
+                        if (newQues[i].id === id)
+                            newQues.splice(i, 1);
+                        this.setState({
+                            ques: newQues
+                        })
+                    }
+                    console.log(this.state.ques);
                 }).catch(err => {
                     console.log(err.message);
                 })
@@ -89,7 +123,7 @@ export default class QuestionApproval extends Component {
                                 <th scope="row">{i + 1}</th>
                                 <td dangerouslySetInnerHTML={{ __html: this.state.ques[key].message }}></td>
                                 <td><Button variant="contained" onClick={() => { this.handleApprove(this.state.ques[key].id) }}>Approve</Button></td>
-                                <td><Button variant="contained">Reject</Button></td>
+                                <td><Button variant="contained" onClick={() => { this.handleReject(this.state.ques[key].id) }}>Reject</Button></td>
                             </tr>
 
                         ))}
